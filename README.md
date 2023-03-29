@@ -1,3 +1,136 @@
 # DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
 
 # ... COMING SOON ...
+
+
+```
+
+This software is protected by the BSD 3-Clause License and
+copyright (c) 2015-2021, SwissMicros. All rights reserved.
+
+Changes and additions are protected by the BSD 3-Clause License
+and copyright (c) 2023, deetee. All rights reserved.
+
+____________________
+
+ PREAMBLE
+____________________
+
+The DM42 calculator is a genuine device. A brilliant LCD display, good keys, a
+USB disk and a powerful processor - all low powered by a single battery cell.
+On the stable operating system (DMCP) runs Free42 - a perfect simulator of the
+legendary HP42 calculator. As the DM42 is an "open system" it is possible to run
+other software on top of the operating system (DMCP). And that is, where DESK42
+comes in.
+DESK42 is an extensive collection of applications that can be started by a
+common user interface (DESK). It offers mathematical, text, graphics and useful
+assistant applications - and even some games.
+
+Have fun!
+deetee
+
+
+____________________
+
+ INSTALLATION
+____________________
+
+Please note that you will loose all user data of your DM42 (ie. user programs or
+settings) - make a backup!
+
+Install DESK42:
+
+ * First load DESK42-xxx.pgm and (for desired later back switch to DM42)
+   DM42-x.xx.pgm (technical.swissmicros.com/dm42/firmware/) to the root directory
+   of the USB disk.
+ * In your DM42 calculator goto SETUP (SHIFT-0)
+ * Enter menu point [5. System >]
+ * Goto system menu with [2. Enter System Menu]
+ * Leave DM42 and switch back to the operating system (DMCP) with
+   [3. Reset to DMCP menu]
+ * Load another program with [3. Load Program]
+ * Select the DESK42 program [DESK42-xxx.pgm]
+ * [Confirm with ENTER]
+ * [Press any key to start]
+ * [Press EXIT to continue ...]
+ * You are running DESK42 - have fun!
+
+Reinstall DM42:
+
+ * Switch back to the operating system (DMCP) with DESK>OS (F6, F6).
+ * Load another program with [3. Load Program]
+ * Select the DM42 program [DM42-x.xx.pgm]
+ * [Confirm with ENTER]
+ * [Press any key to start]
+ * [Press EXIT to continue ...]
+ * You are running DM42 - thanks for trying DESK42
+
+
+____________________
+
+ DESK
+____________________
+
+DESK is the hub and application launcher. It offers 18 quick keys (1-9 and SHIFT
+1-9) to launch selected applications as well as a hierarchical menu system via
+function keys for global settings. Finally DESK can end DESK42 and switch back
+to the operating system (DMCP) of the DM42 calculator.
+
+
+____________________
+
+ HP-35
+____________________
+
+The standard scientific calculator of DESK42 is the emulation of the legendary
+HP-35 pocket calculator, that was introduced by Hewlett-Packard in January 1972.
+Much later Peter Monta, Jacques Laporte and Pietro de Luca managed to run the
+HP-35-ROM on other platforms. And the footprint of this calculator is incredible
+small with 768/1536 words/bytes (ROM) and less than 10 Kilobytes of flash memory
+(for the whole calculator application).
+
+Please note that HP-35 doesn't use shifted keys. The SHIFT key is used to toggle
+between the (smaller) original full precision display of the top of the stack
+and the big 8-digit display. The latter one is complemented with a full
+precision top of stack view in an additional status line.
+This additional status line also displays an executed stacklift, a stored number
+and the use of the recorder (see below) by showing a REC or PLAY sign.
+
+The calculator is complemented by an useful "Key Recorder" which "feeds" the
+emulator with key presses. With the SIGMA key the user can start or stop
+recording key presses - the XEQ key executes the recorded key press series.
+
+But there are also many key series prerecorded that can be selected with extra
+function keys (use the UP and DOWN keys to switch between different function
+keys:
+  * Hyperbolic functions (SINH, COSH, TANH and inverse)
+  * Additional math functions
+    - Polar/Rectangular conversions
+    - Present value (interest rate, time periods -> present value)
+    - Normal distribution (CDF/PDF)
+    - LN! ... ln(gamma()) function (factorial)
+    - Quadratic equation (p, q)
+  * Unit conversions (length weight, volume, temperature). Please note that
+    the conversions are always made in both directions. The X-register always
+    display the metric unit and the Y-register the english one (use SWAP key).
+
+Please note that it is not possible to record pre recorded functions.
+
+Original HP35 display and keyboard layout:
+     _________________________
+    |                         |
+    |     -1.234567890-12     |
+    |_________________________|
+    |                         |
+    | X^Y  log  ln   e^X  CLR |
+    | SQRT arc  sin  cos  tan |
+    | 1/X  X><Y ROT  STO  RCL |
+    | E-N-T-E-R CHS  EEX  CLX |
+    |   -     7     8     9   |
+    |   +     4     5     6   |
+    |   *     1     2     3   |
+    |   /     0     .     PI  |
+    |_________________________|
+
+```
+
