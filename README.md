@@ -28,6 +28,11 @@ comes in.
 DESK42 is an extensive collection of applications that can be started by a
 common user interface (DESK). It offers mathematical, text, graphics and useful
 assistant applications - and even some games.
+Finally a dream became true: The DM42 as essential tool in every cockpit. The
+E6B application offers many (more than the legendary E6B slide rule) utilities
+needed by pilots. Many thanks to (maybe worlds best flight engineer and pilot)
+Jim B. Williams for contributing the needed expert knowhow, many ideas and
+endless patience when discussing aviation topics with a rookie like me.
 
 Have fun!
 deetee
