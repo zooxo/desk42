@@ -5,6 +5,9 @@
 
 ```
 
+
+
+
 This software is protected by the BSD 3-Clause License and
 copyright (c) 2015-2021, SwissMicros. All rights reserved.
 
@@ -73,8 +76,55 @@ ____________________
 
 DESK is the hub and application launcher. It offers 18 quick keys (1-9 and SHIFT
 1-9) to launch selected applications as well as a hierarchical menu system via
-function keys for global settings. Finally DESK can end DESK42 and switch back
+function keys for global settings. Finally DESK can exit DESK42 and switch back
 to the operating system (DMCP) of the DM42 calculator.
+
+
+____________________
+
+ STAX
+____________________
+
+STAX is the standard scientific RPN calculator of DESK42. Many routines of STAX
+are used in other applications. To quit STAX press F1 - please note to reset a
+function menu with UP or DOWN.
+Conversions (F3, CONV) are always made in both directions - that means converting
+a<>b results the a-unit in Y and b-unit in X.
+DISP (Shift+E) changes the display mode of STAX regarding the displayed precision
+or the use of a 'curtain' for small stacks.
+A stored value (STO, RCL) will be indicated in the status line with 'M'.
+
+STAX supports following functions:
+  0...9.      Number input
+  ENTER, R/S  Enter number (lift stack) or duplicate TOS
+  + - * /     Basic operation
+  BACKSPACE   Clear last entry (while number input) or TOS
+  CLEAR       Clear stack and statistics register
+  E           Push Y*10^X to the stack
+  +/-         Negate TOS (ends number input)
+  X<>Y        Swap last stack register
+  SUM+ SUM-   Adds/removes data to/from statistics register
+  BasicMath   1/X SQRT LOG LN POW SQR 10^X e^X
+  STO RCL     Stores TOS or push strored number to stack (store 0 to delete)
+  ROT         Rotate last 3 stack elements
+  Trig        SIN COS TAN ASIN ACOS ATAN
+  COMPLEX     Convert polar to rectangular and back
+  % PI        Percent, PI
+  XEQ         Integer
+  Shift+XEQ   ln(GAMMA)
+  LASTx       Push last ENTERed number to stack
+
+  F1 QUIT     Exit STAX
+  F2 HYP      Hyperbolic functions
+  F3 CONV     Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cn/in, l/gal)
+  F4 STAT     Statisitic/misc functions
+              AVG|S ... Mean value, standard deviation
+              LRa|b ... Line best fit y=ax+b
+              nP|Cr ... Permutations (nPr), Combinations (nCr)
+              P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
+              ln(!) ... Gamma function
+              INT   ... Integer value of TOS
+  F6 HEX      Toggle HEX and DEC mode (=BASE, Shift-4)
 
 
 ____________________
@@ -82,8 +132,8 @@ ____________________
  HP-35
 ____________________
 
-The standard scientific calculator of DESK42 is the emulation of the legendary
-HP-35 pocket calculator, that was introduced by Hewlett-Packard in January 1972.
+This is the emulation of the legendary HP-35 pocket calculator, that was
+introduced by Hewlett-Packard in January 1972.
 Much later Peter Monta, Jacques Laporte and Pietro de Luca managed to run the
 HP-35-ROM on other platforms. And the footprint of this calculator is incredible
 small with 768/1536 words/bytes (ROM) and less than 10 Kilobytes of flash memory
@@ -98,7 +148,8 @@ and the use of the recorder (see below) by showing a REC or PLAY sign.
 
 The calculator is complemented by an useful "Key Recorder" which "feeds" the
 emulator with key presses. With the SIGMA key the user can start or stop
-recording key presses - the XEQ key executes the recorded key press series.
+recording (up to 50) key presses - the XEQ key executes the recorded key press
+series.
 
 But there are also many key series prerecorded that can be selected with extra
 function keys (use the UP and DOWN keys to switch between different function
@@ -131,6 +182,7 @@ Original HP35 display and keyboard layout:
     |   *     1     2     3   |
     |   /     0     .     PI  |
     |_________________________|
+
 
 ```
 
