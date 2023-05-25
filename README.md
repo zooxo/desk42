@@ -6,13 +6,8 @@
 ```
 
 
+DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
 
-
-This software is protected by the BSD 3-Clause License and
-copyright (c) 2015-2021, SwissMicros. All rights reserved.
-
-Changes and additions are protected by the BSD 3-Clause License
-and copyright (c) 2023, deetee. All rights reserved.
 
 ____________________
 
@@ -29,13 +24,13 @@ DESK42 is an extensive collection of applications that can be started by a
 common user interface (DESK). It offers mathematical, text, graphics and useful
 assistant applications - and even some games.
 Finally a dream became true: The DM42 as essential tool in every cockpit. The
-E6B application offers many (more than the legendary E6B slide rule) utilities
-needed by pilots. Many thanks to (maybe worlds best flight engineer and pilot)
+E6B application offers many utilities needed by pilots. Many thanks to
 Jim B. Williams for contributing the needed expert knowhow, many ideas and
 endless patience when discussing aviation topics with a rookie like me.
 
 Have fun!
 deetee
+
 
 
 ____________________
@@ -87,6 +82,12 @@ to the operating system (DMCP) of the DM42 calculator.
 
 ____________________
 
+ STATUS LINE
+____________________
+
+
+____________________
+
  STAX
 ____________________
 
@@ -130,6 +131,42 @@ STAX supports following functions:
               ln(!) ... Gamma function
               INT   ... Integer value of TOS
   F6 HEX      Toggle HEX and DEC mode (=BASE, Shift-4)
+
+
+____________________
+
+ E6B
+____________________
+
+The E6B flight computer is a legendary circular slide rule used in aviation.
+DESK42 has all capabilities (and more) of E6B for flight planning. The expert
+know-how for this application was contributed by Jim B. Williams, an approved
+flight engineer. He has logged several thousand hours of flight time over the
+past 64 years, is a certified FAA Ground School Instructor and has developed
+multiple aviation/navigation spreadsheets for VFR pilots.
+
+All tools of E6B are ordered in 17 pages (browse with F5, F6 or F4):
+  1...4 Dead Reckoning
+  5     Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
+  6     Unit conversion for Distance or Speed
+  7     Unit conversion for Fuel
+  8     Unit conversion for Temperature
+  9     Estimated Time of Arrival (ETA) calculation for the flight leg
+  10    ZULU time (UTC) conversion of the local time
+  11    Traffic Pattern Heading display
+  12    Head/Cross Wind (X-Wind) calculations
+  13    Distance to Horizon estimation
+  14    Pressure Altitude calculation
+  15    Density Altitude calculation
+  16    True Altitude calculation
+  17    True Air Speed (TAS) calculation
+
+Every number input cell can be edited with an RPN calculator (using the routines
+and behavior of STAX). That means you can calculate your desired number in the
+input cell before committing (UP or DOWN key) it to the E6B calculation. In
+addition every number on a page can be copied (F2) to the stack an can be used
+(pasted) in any other input cell.
+To exit/quit E6B to DESK press QUIT (F1).
 
 
 ____________________
@@ -187,6 +224,9 @@ Original HP35 display and keyboard layout:
     |   *     1     2     3   |
     |   /     0     .     PI  |
     |_________________________|
+
+
+
 
 
 ```
