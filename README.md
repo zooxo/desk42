@@ -139,11 +139,11 @@ ____________________
 ____________________
 
 The E6B flight computer is a legendary circular slide rule used in aviation.
-DESK42 has all capabilities (and more) of E6B for flight planning. The expert
-know-how for this application was contributed by Jim B. Williams, an approved
-flight engineer. He has logged several thousand hours of flight time over the
-past 64 years, is a certified FAA Ground School Instructor and has developed
-multiple aviation/navigation spreadsheets for VFR pilots.
+DESK42 has all capabilities (and more) of E6B for flight planning. The
+know-how for this application was contributed by Jim B. Williams. Jim has
+logged several thousand hours of flight time over the past 64 years, is a
+certified FAA Ground School Instructor and has developed multiple
+aviation/navigation spreadsheets for VFR pilots.
 
 All tools of E6B are ordered in 17 pages (browse with F5, F6 or F4):
   1...4 Dead Reckoning
