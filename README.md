@@ -25,7 +25,7 @@ common user interface (DESK). It offers mathematical, text, graphics and useful
 assistant applications - and even some games.
 Finally a dream became true: The DM42 as essential tool in every cockpit. The
 E6B application offers many utilities needed by pilots. Many thanks to
-Jim B. Williams for contributing the needed expert knowhow, many ideas and
+Jim B. Williams for contributing the needed expert know-how, many ideas and
 endless patience when discussing aviation topics with a rookie like me.
 
 Have fun!
@@ -92,8 +92,8 @@ ____________________
 ____________________
 
 STAX is the standard scientific RPN calculator of DESK42. Many routines of STAX
-are used in other applications. To quit STAX press F1 - please note to reset a
-function menu with UP or DOWN.
+are used in other applications. To quit STAX press F1 - use UP or DOWN to exit
+a function menu.
 Conversions (F3, CONV) are always made in both directions - that means converting
 a<>b results the a-unit in Y and b-unit in X.
 DISP (Shift+E) changes the display mode of STAX regarding the displayed precision
@@ -101,36 +101,36 @@ or the use of a 'curtain' for small stacks.
 A stored value (STO, RCL) will be indicated in the status line with 'M'.
 
 STAX supports following functions:
-  0...9.      Number input
-  ENTER, R/S  Enter number (lift stack) or duplicate TOS
-  + - * /     Basic operation
-  BACKSPACE   Clear last entry (while number input) or TOS
-  CLEAR       Clear stack and statistics register
-  E           Push Y*10^X to the stack
-  +/-         Negate TOS (ends number input)
-  X<>Y        Swap last stack register
-  SUM+ SUM-   Adds/removes data to/from statistics register
-  BasicMath   1/X SQRT LOG LN POW SQR 10^X e^X
-  STO RCL     Stores TOS or push strored number to stack (store 0 to delete)
-  ROT         Rotate last 3 stack elements
-  Trig        SIN COS TAN ASIN ACOS ATAN
-  COMPLEX     Convert polar to rectangular and back
-  % PI        Percent, PI
-  XEQ         Integer
-  Shift+XEQ   ln(GAMMA)
-  LASTx       Push last ENTERed number to stack
+  0~9.       Number input
+  ENTER R/S  Enter number (lift stack) or duplicate TOS
+  + - * /    Basic operation
+  BACKSPACE  Clear last entry (while number input) or TOS
+  CLEAR      Clear stack and statistics register
+  E          Push Y*10^X to the stack
+  +/-        Negate TOS (ends number input)
+  X<>Y       Swap last stack register
+  SUM+ SUM-  Adds/removes data to/from statistics register
+  BasicMath  1/X SQRT LOG LN POW SQR 10^X e^X
+  STO RCL    Stores TOS or push strored number to stack (store 0 to delete)
+  ROT        Rotate last 3 stack elements
+  Trig       SIN COS TAN ASIN ACOS ATAN
+  COMPLEX    Convert polar to rectangular and back
+  % PI       Percent, PI
+  XEQ        Integer
+  Shift+XEQ  ln(GAMMA)
+  LASTx      Push last ENTERed number to stack
 
-  F1 QUIT     Exit STAX
-  F2 HYP      Hyperbolic functions
-  F3 CONV     Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cn/in, l/gal)
-  F4 STAT     Statisitic/misc functions
-              AVG|S ... Mean value, standard deviation
-              LRa|b ... Line best fit y=ax+b
-              nP|Cr ... Permutations (nPr), Combinations (nCr)
-              P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
-              ln(!) ... Gamma function
-              INT   ... Integer value of TOS
-  F6 HEX      Toggle HEX and DEC mode (=BASE, Shift-4)
+  F1 QUIT    Exit STAX
+  F2 HYP     Hyperbolic functions
+  F3 CONV    Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cn/in, l/gal)
+  F4 STAT    Statisitic/misc functions
+             AVG|S ... Mean value, standard deviation
+             LRa|b ... Line best fit y=ax+b
+             nP|Cr ... Permutations (nPr), Combinations (nCr)
+             P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
+             ln(!) ... Gamma function
+             INT   ... Integer value of TOS
+  F6 HEX     Toggle HEX and DEC mode (=BASE, Shift-4)
 
 
 ____________________
@@ -145,26 +145,34 @@ logged several thousand hours of flight time over the past 64 years, is a
 certified FAA Ground School Instructor and has developed multiple
 aviation/navigation spreadsheets for VFR pilots.
 
+The DESK42 E6B application has been created and developed to aid the VFR pilot
+with flight planning, take-off, enroute, and landing calculations. Although the
+app has been tested extensively and is believed to be bug free, there is always
+the possibility of an error in the software. It is therefore recommended that
+the pilot double check by other means the critical output data for safety’s
+sake. If any error(s) are found, please contact the developer so that the
+program can be corrected.
+
 All tools of E6B are ordered in 17 pages (browse with F5, F6 or F4):
-  1...4 Dead Reckoning
-  5     Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
-  6     Unit conversion for Distance or Speed
-  7     Unit conversion for Fuel
-  8     Unit conversion for Temperature
-  9     Estimated Time of Arrival (ETA) calculation for the flight leg
-  10    ZULU time (UTC) conversion of the local time
-  11    Traffic Pattern Heading display
-  12    Head/Cross Wind (X-Wind) calculations
-  13    Distance to Horizon estimation
-  14    Pressure Altitude calculation
-  15    Density Altitude calculation
-  16    True Altitude calculation
-  17    True Air Speed (TAS) calculation
+  1~4  Dead Reckoning
+  5    Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
+  6    Unit conversion for Distance or Speed
+  7    Unit conversion for Fuel
+  8    Unit conversion for Temperature
+  9    Estimated Time of Arrival (ETA) calculation for the flight leg
+  10   ZULU time (UTC) conversion of the local time
+  11   Traffic Pattern Heading display
+  12   Head/Cross Wind (X-Wind) calculations
+  13   Distance to Horizon estimation
+  14   Pressure Altitude calculation
+  15   Density Altitude calculation
+  16   True Altitude calculation
+  17   True Air Speed (TAS) calculation
 
 Every number input cell can be edited with an RPN calculator (using the routines
 and behavior of STAX). That means you can calculate your desired number in the
 input cell before committing (UP or DOWN key) it to the E6B calculation. In
-addition every number on a page can be copied (F2) to the stack an can be used
+addition all numbers on a page can be copied (F2) to the stack an can be used
 (pasted) in any other input cell.
 To exit/quit E6B to DESK press QUIT (F1).
 
@@ -176,7 +184,7 @@ ____________________
 
 This is the emulation of the legendary HP-35 pocket calculator, that was
 introduced by Hewlett-Packard in January 1972.
-Much later Peter Monta, Jacques Laporte and Pietro de Luca managed to run the
+Much later PeOCter Monta, Jacques Laporte and Pietro de Luca managed to run the
 HP-35-ROM on other platforms. And the footprint of this calculator is incredible
 small with 768/1536 words/bytes (ROM) and less than 10 Kilobytes of flash memory
 (for the whole calculator application).
