@@ -94,43 +94,106 @@ ____________________
 STAX is the standard scientific RPN calculator of DESK42. Many routines of STAX
 are used in other applications. To quit STAX press F1 - use UP or DOWN to exit
 a function menu.
+
 Conversions (F3, CONV) are always made in both directions - that means converting
 a<>b results the a-unit in Y and b-unit in X.
 DISP (Shift+E) changes the display mode of STAX regarding the displayed precision
-or the use of a 'curtain' for small stacks.
+or the use of a 'curtain' for less filled stacks.
+
 A stored value (STO, RCL) will be indicated in the status line with 'M'.
 
-STAX supports following functions:
-  0~9.       Number input
-  ENTER R/S  Enter number (lift stack) or duplicate TOS
-  + - * /    Basic operation
-  BACKSPACE  Clear last entry (while number input) or TOS
-  CLEAR      Clear stack and statistics register
-  E          Push Y*10^X to the stack
-  +/-        Negate TOS (ends number input)
-  X<>Y       Swap last stack register
-  SUM+ SUM-  Adds/removes data to/from statistics register
-  BasicMath  1/X SQRT LOG LN POW SQR 10^X e^X
-  STO RCL    Stores TOS or push strored number to stack (store 0 to delete)
-  ROT        Rotate last 3 stack elements
-  Trig       SIN COS TAN ASIN ACOS ATAN
-  COMPLEX    Convert polar to rectangular and back
-  % PI       Percent, PI
-  XEQ        Integer
-  Shift+XEQ  ln(GAMMA)
-  LASTx      Push last ENTERed number to stack
+STAX supports calculating with complex numbers. To execute the next keypress as
+complex operation press COMPLEX (Shift+STO) or simply XEQ. Please note that the
+imaginary part (or angle) of a number is located in the Y register of the stack
+while the real part (or absolute value) is located in the X register.
 
-  F1 QUIT    Exit STAX
-  F2 HYP     Hyperbolic functions
-  F3 CONV    Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cn/in, l/gal)
-  F4 STAT    Statisitic/misc functions
-             AVG|S ... Mean value, standard deviation
-             LRa|b ... Line best fit y=ax+b
-             nP|Cr ... Permutations (nPr), Combinations (nCr)
-             P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
-             ln(!) ... Gamma function
-             INT   ... Integer value of TOS
-  F6 HEX     Toggle HEX and DEC mode (=BASE, Shift-4)
+In addition STAX provides an useful "Key Recorder" which "plays" recorded key
+presses. Record key presses with PRGM (Shift + R/S) and stop recording with PRGM
+or R/S. Execute the recorded key presses (up to 50) with R/S.
+
+STAX status line indicators
+  M              Value (except 0) stored
+  CPX            Execute next operation with complex numbers
+  STOP PLAY REC  Key recorder indicator
+  X              HEX mode
+
+STAX supports following functions:
+  0~9.         Number input
+  ENTER        Enter number (lift stack) or duplicate TOS
+  + - * /      Basic operation
+  BACKSPACE    Clear last entry (while number input) or TOS
+  CLEAR        Clear stack and statistics register
+  E            Push Y*10^X to the stack
+  +/-          Negate TOS (ends number input)
+  X<>Y         Swap last stack register
+  SUM+ SUM-    Adds/removes data to/from statistics register
+  BasicMath    1/X SQRT LOG LN POW SQR 10^X e^X
+  STO RCL      Stores TOS or push strored number to stack (store 0 to delete)
+  ROT          Rotate last 3 stack elements
+  Trig         SIN COS TAN ASIN ACOS ATAN
+  COMPLEX XEQ  Execute the next key as complex number operation (see below)
+  % PI         Percent, PI
+  Shift+XEQ    ln(GAMMA)
+  LASTx        Push last ENTERed number to stack
+  PRGM R/S     Record key presses or run recorded key presses
+
+  F1 QUIT      Exit STAX
+  F2 HYP       Hyperbolic functions
+  F3 CONV      Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cn/in, l/gal)
+  F4 STAT      Statisitic/misc functions
+               AVG|S ... Mean value, standard deviation
+               LRa|b ... Line best fit y=ax+b
+               nP|Cr ... Permutations (nPr), Combinations (nCr)
+               P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
+               ln(!) ... Gamma function
+               INT   ... Integer value of TOS
+  F5           Physical constant (see below)
+  F6 HEX BASE  Toggle HEX and DEC mode
+
+Complex number operations (XEQ + ...):
+  UP           Convert to polar coordinates
+  DOWN         Convert to rectangular coordinates
+  BasicMath    + - * /  1/X SQRT LOG LN POW SQR 10^X e^X
+  Trig         SIN COS TAN ASIN ACOS ATAN
+  Misc         +/- BACKSPACE ENTER SWAP STO RCL LASTx
+
+Physical constants (F5);
+  c    299792458         Speed of light
+  g    9.80665           Acceleration of gravity
+  G    6.67430e-11       Newton constant of gravity
+  Vm   0.02271095464     Molar volume of ideal gas
+  NA   6.02214076e23     Avogadro constant
+  Rinf 10973731.568160   Rydberg constant
+  h    6.62607015e-34    Planck constant
+  Phi0 2.067833848e-15   Magnetic flux quantum
+  a0   5.29177210903e-11 Bohr radius
+  k    1.380649e-23      Boltzmann constant
+  R    8.314462618       Molar gas constant
+  F    96485.33212       Faraday constant
+  t    273.15            Celsius temperature
+  atm  101325            Standard atmosphere
+  e    1.602176634e-19   Elementary charge
+  eps0 8.8541878128e-12  Vacuum electric permittivity
+  mu0  1.25663706212e-6  Vacuum magnetic permeability
+  Z0   376.730313668     Impedance of vacuum
+  mU   1.6605390666e-27  Atomic mass constant
+  re   2.8179403262e-15  Electron radius
+  me   9.1093837015e-31  Electron mass
+  mp   1.67262192369e-27 Proton mass
+  mn   1.67492749804e-27 Neutron mass
+  mmu  1.883531627e-28   Muon mass
+  muB  9.2740100783e-24  Bohr magneton
+  muN  5.0507837461e-27  Nuclear magneton
+  mue  -9.2847647043e-24 Electron magnetic moment
+  mup  1.41060679736e-26 Proton magnetic moment
+  mun  -9.6623651e-27    Neutron magnetic moment
+  mumu -4.4904483e-26    Muon magnetic moment
+  alph 7.2973525693e-3   Fine structure constant
+  sigm 5.670374419e-8    Stefan-Boltzmann constant
+  G0   7.748091729       Conductance quantum
+  gamp 2.6752218744e8    Proton gyromagnetic ratio
+  C1   3.741771852e-16   First radiation constant
+  C2   1.438776877e-2    Second radiation constant
 
 
 ____________________
