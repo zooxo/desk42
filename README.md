@@ -95,10 +95,10 @@ STAX is the standard scientific RPN calculator of DESK42. Many routines of STAX
 are used in other applications. To quit STAX press F1 - use UP or DOWN to exit
 a function menu.
 
-Conversions (F3, CONV) are always made in both directions - that means converting
-a<>b results the a-unit in Y and b-unit in X.
-DISP (Shift+E) changes the display mode of STAX regarding the displayed precision
-or the use of a 'curtain' for less filled stacks.
+Conversions (F3, CONV) are always made in both directions - that means
+converting a<>b results the a-unit in Y and b-unit in X.
+DISP (Shift+E) changes the display mode of STAX regarding the displayed
+precision or the use of a 'curtain' for less filled stacks.
 
 A stored value (STO, RCL) will be indicated in the status line with 'M'.
 
@@ -107,9 +107,12 @@ complex operation press COMPLEX (Shift+STO) or simply XEQ. Please note that the
 imaginary part (or angle) of a number is located in the Y register of the stack
 while the real part (or absolute value) is located in the X register.
 
-In addition STAX provides an useful "Key Recorder" which "plays" recorded key
-presses. Record key presses with PRGM (Shift + R/S) and stop recording with PRGM
-or R/S. Execute the recorded key presses (up to 50) with R/S.
+STAX provides an useful "Key Recorder" which "plays" recorded key presses.
+Record key presses with PRGM (Shift + R/S) and stop recording with PRGM or R/S.
+Execute the recorded key presses (up to 50) with R/S.
+Additionally finding the root (SOLVER), calculating an integral (INTEGRAL) or
+printing a graph (PRINT) is supported (if the recorded keys represent a
+function).
 
 STAX status line indicators
   M              Value (except 0) stored
@@ -120,22 +123,24 @@ STAX status line indicators
 STAX supports following functions:
   0~9.         Number input
   ENTER        Enter number (lift stack) or duplicate TOS
-  + - * /      Basic operation
+  X<>Y         Swap last stack register
+  LASTx        Push last ENTERed number to stack
+  +/-          Negate TOS (ends number input)
+  E            Push Y*10^X to the stack
   BACKSPACE    Clear last entry (while number input) or TOS
   CLEAR        Clear stack and statistics register
-  E            Push Y*10^X to the stack
-  +/-          Negate TOS (ends number input)
-  X<>Y         Swap last stack register
-  SUM+ SUM-    Adds/removes data to/from statistics register
-  BasicMath    1/X SQRT LOG LN POW SQR 10^X e^X
+  + - * /      Basic operation
   STO RCL      Stores TOS or push strored number to stack (store 0 to delete)
   ROT          Rotate last 3 stack elements
   Trig         SIN COS TAN ASIN ACOS ATAN
+  SUM+ SUM-    Adds/removes data to/from statistics register
+  BasicMath    % PI 1/X POW SQRT SQR LOG 10^X LN e^X
   COMPLEX XEQ  Execute the next key as complex number operation (see below)
-  % PI         Percent, PI
   Shift+XEQ    ln(GAMMA)
-  LASTx        Push last ENTERed number to stack
   PRGM R/S     Record key presses or run recorded key presses
+  SOLVER       Find root of recorded function (preenter a start value)
+  INTEGRAL     Integral of recorded function (preenter limits a and b)
+  PRINT        Print a graph (preenter limits a and b)
 
   F1 QUIT      Exit STAX
   F2 HYP       Hyperbolic functions
@@ -155,7 +160,7 @@ Complex number operations (XEQ + ...):
   DOWN         Convert to rectangular coordinates
   BasicMath    + - * /  1/X SQRT LOG LN POW SQR 10^X e^X
   Trig         SIN COS TAN ASIN ACOS ATAN
-  Misc         +/- BACKSPACE ENTER SWAP STO RCL LASTx
+  Misc         ENTER SWAP +/- BACKSPACE STO RCL LASTx
 
 Physical constants (F5);
   c    299792458         Speed of light
@@ -217,20 +222,31 @@ sake. If any error(s) are found, please contact the developer so that the
 program can be corrected.
 
 All tools of E6B are ordered in 17 pages (browse with F5, F6 or F4):
-  1~4  Dead Reckoning
-  5    Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
-  6    Unit conversion for Distance or Speed
-  7    Unit conversion for Fuel
-  8    Unit conversion for Temperature
-  9    Estimated Time of Arrival (ETA) calculation for the flight leg
-  10   ZULU time (UTC) conversion of the local time
-  11   Traffic Pattern Heading display
-  12   Head/Cross Wind (X-Wind) calculations
-  13   Distance to Horizon estimation
-  14   Pressure Altitude calculation
-  15   Density Altitude calculation
-  16   True Altitude calculation
-  17   True Air Speed (TAS) calculation
+  0    Table of pages (9 fast keys to E6B categories)
+  1    Dead Reckoning 1: Select route input (page 2) and desired units
+  2    Dead Reckoning 2: Insert coordinates or course/distance
+       Latitude/Longitude repectively True Course and Distance
+  3    Dead Reckoning 3: Insert other data
+       Magnetic Variation, True Air Speed, Fuel Burn Rate,
+       Wind Direction and Wind Velocity
+  4    Dead Reckoning 4: Results
+       Magnetic Heading, Distance, Ground Speed, Leg Time and Leg Fuel
+  5    Estimated Time of Arrival (ETA) calculation for the flight leg
+       Init/Start Time, Leg Time, ETA
+  6    ZULU time (UTC) conversion of the local time
+       Init/Start Time, Time Difference
+
+  7    Unit conversion for Temperature
+  8   Pressure Altitude calculation
+  9   Density Altitude calculation
+  10   True Altitude calculation
+  11   True Air Speed (TAS) calculation
+  12   Distance to Horizon estimation
+  13   Traffic Pattern Heading display
+  14   Head/Cross Wind (X-Wind) calculations
+  15   Unit conversion for Fuel
+  16    Unit conversion for Distance or Speed
+  17    Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
 
 Every number input cell can be edited with an RPN calculator (using the routines
 and behavior of STAX). That means you can calculate your desired number in the
