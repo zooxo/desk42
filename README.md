@@ -233,24 +233,36 @@ All tools of E6B are ordered in 17 pages (browse with F5, F6 or F4):
        Magnetic Heading, Distance, Ground Speed, Leg Time and Leg Fuel
   5    Estimated Time of Arrival (ETA) calculation for the flight leg
        Init/Start Time, Leg Time, ETA
-  6    ZULU time (UTC) conversion of the local time
-       Init/Start Time, Time Difference
-
-  7    Unit conversion for Temperature
-  8   Pressure Altitude calculation
-  9   Density Altitude calculation
-  10   True Altitude calculation
-  11   True Air Speed (TAS) calculation
-  12   Distance to Horizon estimation
-  13   Traffic Pattern Heading display
-  14   Head/Cross Wind (X-Wind) calculations
-  15   Unit conversion for Fuel
-  16    Unit conversion for Distance or Speed
-  17    Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
+  6    ZULU Time (UTC) Conversion of Local Time
+       Init/Start Time, Time Zone (main airport of time zone, keys 4 or 6)
+  7    Temperature Conversion
+       Fahrenheit, Celsius, Kelvin
+  8    Pressure Altitude Calculation
+       Airport Elevation, Altimeter Settings (Hg), Pressure Altitude
+  9    Density Altitude Calculation
+       Pressure Altitude, OAT (Outside Air Temperature), Density Altitude
+  10   True Altitude Calculation
+       OAT (Outside Air Temperature), Pressure Altitude, Indicated Altitude,
+       Ground Station Altitude, Corrected Altitude
+  11   True Air Speed (TAS) Calculation
+       Pressure Altitude, OAT (Outside Air Temperature),
+       IAS (Indicated Airspeed), TAS (True Air Speed)
+  12   Distance to Horizon Estimation
+       AGL (Above Ground Level) Altitude
+  13   Traffic Pattern Heading
+       Runway Number, Entry, Down Wind, Base, Finial
+  14   Head/Cross Wind (X-Wind) Calculations
+       Runway Number, Wind Direction, Wind Velocity, Head/Tail Wind, Cross Wind
+  15   Unit Conversion for Fuel
+       Imperial Gallons, US Gallons, Litres
+  16   Unit Conversion for Distance or Speed
+       Distance (Nautical Miles, Statute Miles, Kilometres)
+       Speed (Knots, Miles per Hour, Kilometres per Hour)
+  17   Distance/Time/Speed or Fuel/Time/FuelBurnRate calculations
 
 Every number input cell can be edited with an RPN calculator (using the routines
 and behavior of STAX). That means you can calculate your desired number in the
-input cell before committing (UP or DOWN key) it to the E6B calculation. In
+input cell before committing it to the E6B calculation (UP or DOWN key). In
 addition all numbers on a page can be copied (F2) to the stack an can be used
 (pasted) in any other input cell.
 To exit/quit E6B to DESK press QUIT (F1).
