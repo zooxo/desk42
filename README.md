@@ -5,8 +5,8 @@
 
 ```
 
-
 DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
+
 
 
 ____________________
@@ -30,7 +30,6 @@ endless patience when discussing aviation topics with a rookie like me.
 
 Have fun!
 deetee
-
 
 
 ____________________
@@ -84,6 +83,32 @@ ____________________
 
  STATUS LINE
 ____________________
+
+The top line offers information about the system, the running application and
+its settings.
+The symbol and number at the most right position shows the battery status (where
+the number 9 indicates a full battery or a power connection).
+The next indicators show date (YYMMDD, MMDDYY or DDMMYY - toggle with DFmt) and
+time (in 24 hour format).
+The central part of the top line gives you information about the status of the
+system (ie shift key or text input method).
+The left side of the status line gives you information about the running app
+(name, status, indicators).
+
+____________________
+
+ TEXT INPUT METHOD
+____________________
+
+When pressing ALPHA (Shift+ENTER) a function key menu pops up to select the
+desired text input method (123, ABC, KBD or ASC):
+  123  Number keys enter number - other keys like "ABC"
+  ABC  Alpha keys (Shift for capital letters)
+  KBD  Virtual keyboard (DESK/kbd.txt) in top 3 key rows (Shift QUIT to leave)
+  ASC  Select character from ascii table (numpad as cursor, key 5 selects)
+
+Please note that the used text input method will be indicated in the central
+part of the status line (1, alpha, keyboard, table).
 
 
 ____________________
@@ -140,18 +165,18 @@ STAX supports following functions:
   PRGM R/S     Record key presses or run recorded key presses
   SOLVER       Find root of recorded function (preenter a start value)
   INTEGRAL     Integral of recorded function (preenter limits a and b)
-  PRINT        Print a graph (preenter limits a and b)
+  PRINT        Plot a graph (preenter limits a and b) with 100x48 pixel
 
   F1 QUIT      Exit STAX
   F2 HYP       Hyperbolic functions
-  F3 CONV      Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cn/in, l/gal)
-  F4 STAT      Statisitic/misc functions
+  F3 STAT      Statisitic/misc functions
                AVG|S ... Mean value, standard deviation
                LRa|b ... Line best fit y=ax+b
                nP|Cr ... Permutations (nPr), Combinations (nCr)
                P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
-               ln(!) ... Gamma function
+               LN(!) ... Gamma function
                INT   ... Integer value of TOS
+  F4 CONV      Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cm/in, l/gal)
   F5           Physical constant (see below)
   F6 HEX BASE  Toggle HEX and DEC mode
 
@@ -199,6 +224,60 @@ Physical constants (F5);
   gamp 2.6752218744e8    Proton gyromagnetic ratio
   C1   3.741771852e-16   First radiation constant
   C2   1.438776877e-2    Second radiation constant
+
+
+____________________
+
+ RAX
+____________________
+
+RAX is the spreadsheet application of DESK42. When starting RAX you are in the
+navigation mode. The number keys work as cursor pad (see below). The navigation
+mode is also active when you refer in a formula to a specific cell.
+
+Navigation Numpad/Cursorpad:
+  7 Home  8 Up     9 PgUp
+  4 Left  5 Enter  6 Right
+  1 End   2 Down   3 PgDn
+
+Keys in navigation mode:
+  1~9      Navigation - cursor pad
+  BSP      Delete cell
+  ENTER    Edit selected cell
+  STO      Define and edit a new text cell
+
+  F1       QUIT RAX
+  F2       FILE operation (New, Open, Save, SaveAs)
+  F3 F4    COPY and PASTE the selected cell
+  F5 F6    Change displayed spreadsheet format
+
+Keys in edit mode (ENTER to select and quit):
+  F1       QUIT edit mode
+  F2 OP    Spreadsheet operations
+    GET    References (REF/RCL, IND) regular or indirect (push col and row)
+    STACK  Stack operations (CLR, DROP, ENTER, RCL)
+    STAT   Functions with referenced areas (COUNT, SUM, MIN/MAX, AVG, LRa|b)
+    COND   Conditions (IF, ELSE, THEN, <, =, >)
+    INF    Infinitesimal operations (MIN/MAX/PLOT, SLOPE, SOLVE, INT, DEQ))
+  F3 FN    (STAX) Functions (HYP, STAT, CONV, CONST) ... see STAX
+  F5/F6    Cursor left/right
+  BSP      Clear command left to cursor
+  CLEAR    Clear complete formula
+  RCL      Reference
+  R/S      Separate numbers (enter)
+
+  Indirect references (IND) refer to row and column number from the stack.
+  A condition (< = >) compares two stack values - returns 1 (true) or 0 (false)
+  Due to FORTH a conditional function consists of:
+    <condition> IF <true-branch> ELSE(optional) <false-branch> THEN
+  MIN/MAX/PLOT pushes minimal and maximal plot values to the stack and plots the
+  function when leaving the edit mode (ENTER).
+  The INF functions evaluate a cell containing a function (REF to function)
+  which depends itself to a referenced cell (REF to x). If applicable additional
+  REFerences are required (ie x-value-range).
+  DEQ solves a differential equation (REF to function, x, y, x-target) y'=f(x,y)
+  with given start value y(x0) due to Runge-Kutta with 4th order (RK4). DEQ
+  calculates the solution function (y value for the targeted x).
 
 
 ____________________
@@ -275,7 +354,7 @@ ____________________
 
 This is the emulation of the legendary HP-35 pocket calculator, that was
 introduced by Hewlett-Packard in January 1972.
-Much later PeOCter Monta, Jacques Laporte and Pietro de Luca managed to run the
+Much later Peter Monta, Jacques Laporte and Pietro de Luca managed to run the
 HP-35-ROM on other platforms. And the footprint of this calculator is incredible
 small with 768/1536 words/bytes (ROM) and less than 10 Kilobytes of flash memory
 (for the whole calculator application).
@@ -323,7 +402,6 @@ Original HP35 display and keyboard layout:
     |   *     1     2     3   |
     |   /     0     .     PI  |
     |_________________________|
-
 
 
 
