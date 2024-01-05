@@ -4,7 +4,6 @@
 
 
 ```
-
 DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
 
 
@@ -279,6 +278,20 @@ Keys in edit mode (ENTER to select and quit):
   with given start value y(x0) due to Runge-Kutta with 4th order (RK4). DEQ
   calculates the solution function (y value for the targeted x).
 
+____________________
+
+ FLEX
+____________________
+
+  The calculator FLEX has the look and feel of STAX, but actually calculates
+  with the (first) cells of a RAX spreadsheet. Hence you can see (but not yet
+  edit) the formula that yields to the result.
+
+  Please note that numbers without a terminating ENTER (after using SWAP or ROT)
+  will be treated as not closed numbers (ie "2 ENTER 1 SWAP +" yields 24 =12*2).
+  Please note that DISP (Shift+E) toggles the display format.
+  Please note that leaving FLEX always clears all variables.
+
 
 ____________________
 
@@ -402,8 +415,6 @@ Original HP35 display and keyboard layout:
     |   *     1     2     3   |
     |   /     0     .     PI  |
     |_________________________|
-
-
 
 
 ```
