@@ -2,6 +2,7 @@
 
 # ... COMING SOON ...
 
+![desk42](https://github.com/zooxo/desk42/assets/16148023/94213748-9ab6-4633-9bc6-1081f0df63a6)
 
 ```
 DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
