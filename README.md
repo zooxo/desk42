@@ -1,12 +1,12 @@
-# DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
+# DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
 # ... COMING SOON ...
 
 ![desk42](https://github.com/zooxo/desk42/assets/16148023/94213748-9ab6-4633-9bc6-1081f0df63a6)
 
 ```
-DESK42 - Spreadsheet, Text, Graphics, Games and More for the DM42
 
+DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
 
 ____________________
@@ -78,6 +78,16 @@ DESK is the hub and application launcher. It offers 18 quick keys (1-9 and SHIFT
 function keys for global settings. Finally DESK can exit DESK42 and switch back
 to the operating system (DMCP) of the DM42 calculator.
 
+Desk menu:
+  DESK  Global settings
+        COLOR  Set background color for DESK
+        FPS    Set speed (frames per second) for various applications
+        KEYin  Set preferred text input mode (see chapter TEXT INPUT MODE)
+        Dfmt   Set date format in status line (YMD, MDY, DMY)
+        OS     Leave DESK42 to OS (DMCP)
+  APP   Menu to launch all possible applications
+  SNIP  Perform a screenshot with a delay of 5 seconds
+  INFO  DESK42 info
 
 ____________________
 
@@ -245,6 +255,7 @@ Keys in navigation mode:
   BSP      Delete cell
   ENTER    Edit selected cell
   STO      Define and edit a new text cell
+  CONVERT  (Shift+5) Hardcopy cell value
 
   F1       QUIT RAX
   F2       FILE operation (New, Open, Save, SaveAs)
@@ -254,44 +265,61 @@ Keys in navigation mode:
 Keys in edit mode (ENTER to select and quit):
   F1       QUIT edit mode
   F2 OP    Spreadsheet operations
-    GET    References (REF/RCL, IND) regular or indirect (push col and row)
-    STACK  Stack operations (CLR, DROP, ENTER, RCL)
-    STAT   Functions with referenced areas (COUNT, SUM, MIN/MAX, AVG, LRa|b)
-    COND   Conditions (IF, ELSE, THEN, <, =, >)
-    INF    Infinitesimal operations (MIN/MAX/PLOT, SLOPE, SOLVE, INT, DEQ))
-  F3 FN    (STAX) Functions (HYP, STAT, CONV, CONST) ... see STAX
+     GET   References (REF/RCL, IND) regular or indirect (push col and row)
+     STACK Stack operations (CLR, DROP, ENTER, RCL)
+     STAT  Functions with referenced areas (COUNT, SUM, MIN/MAX, AVG, LRa|b)
+     COND  Conditions (IF, ELSE, THEN, <, =, >)
+     INF   Infinitesimal operations (MIN/MAX/PLOT, SLOPE, SOLVE, INT, DEQ))
+  F3 FN    (STAX) Functions (HYP, STAT, CONV, CONST, MAT) ... see STAX
   F5/F6    Cursor left/right
   BSP      Clear command left to cursor
   CLEAR    Clear complete formula
   RCL      Reference
   R/S      Separate numbers (enter)
 
-  Indirect references (IND) refer to row and column number from the stack.
-  A condition (< = >) compares two stack values - returns 1 (true) or 0 (false)
-  Due to FORTH a conditional function consists of:
-    <condition> IF <true-branch> ELSE(optional) <false-branch> THEN
-  MIN/MAX/PLOT pushes minimal and maximal plot values to the stack and plots the
-  function when leaving the edit mode (ENTER).
-  The INF functions evaluate a cell containing a function (REF to function)
-  which depends itself to a referenced cell (REF to x). If applicable additional
-  REFerences are required (ie x-value-range).
-  DEQ solves a differential equation (REF to function, x, y, x-target) y'=f(x,y)
-  with given start value y(x0) due to Runge-Kutta with 4th order (RK4). DEQ
-  calculates the solution function (y value for the targeted x).
+Matrix funktions (MAT):
+    DET   Determinant (from)
+    TRANS Transpose (from, to)
+    INV   Inverse (from, to)
+    MULT  Multiply (from1, from2, to)
+    SUB   Substract (from1, from2, to)
+    ADD   Add (from1, from2, to)
+  Please note that RAX deals with 3x3 matrices only - smaller matrices can be
+  a subset.
+  A reference to a matrix references to the first matrix cell [1|1].
+  Matrix functions that create a new matrix write 3x3 (hard coded) values to
+  the spreadsheet at the target cell (to) if there is sufficient room on the
+  spreadsheet. Please be careful using these commands without a target cell to
+  not overwrite existing contents of the spreadsheet.
+  Please note that all matrix functions leave the determinant value on the stack.
+
+Indirect references (IND) refer to row and column number from the stack.
+A condition (< = >) compares two stack values - returns 1 (true) or 0 (false)
+Due to FORTH a conditional function consists of:
+  <condition> IF <true-branch> ELSE(optional) <false-branch> THEN
+MIN/MAX/PLOT pushes minimal and maximal plot values to the stack and plots the
+function when leaving the edit mode (ENTER).
+The INF functions evaluate a cell containing a function (REF to function)
+which depends itself to a referenced cell (REF to x). In some cases additional
+REFerences are required (ie x-value-range).
+DEQ solves a differential equation (REF to function, x, y, x-target) y'=f(x,y)
+with given start value y(x0) due to Runge-Kutta with 4th order (RK4). DEQ
+calculates the solution function (y value for the targeted x).
+
 
 ____________________
 
  FLEX
 ____________________
 
-  The calculator FLEX has the look and feel of STAX, but actually calculates
-  with the (first) cells of a RAX spreadsheet. Hence you can see (but not yet
-  edit) the formula that yields to the result.
+The calculator FLEX has the look and feel of STAX, but actually calculates
+with the (first) cells of a RAX spreadsheet. Hence you can see (but not yet
+edit) the formula that yields to the result.
 
-  Please note that numbers without a terminating ENTER (after using SWAP or ROT)
-  will be treated as not closed numbers (ie "2 ENTER 1 SWAP +" yields 24 =12*2).
-  Please note that DISP (Shift+E) toggles the display format.
-  Please note that leaving FLEX always clears all variables.
+Please note that numbers without a terminating ENTER (after using SWAP or ROT)
+will be treated as not closed numbers (ie "2 ENTER 1 SWAP +" yields 24 =12*2).
+Please note that DISP (Shift+E) toggles the display format.
+Please note that leaving FLEX always clears all variables.
 
 
 ____________________
