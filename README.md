@@ -9,6 +9,7 @@
 DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
 
+
 ____________________
 
  PREAMBLE
@@ -86,7 +87,7 @@ Desk menu:
         Dfmt   Set date format in status line (YMD, MDY, DMY)
         OS     Leave DESK42 to OS (DMCP)
   APP   Menu to launch all possible applications
-  SNIP  Perform a screenshot with a delay of 5 seconds
+  SNIP  Perform a screenshot with a delay of 5 seconds (wait for beep)
   INFO  DESK42 info
 
 ____________________
@@ -235,6 +236,13 @@ Physical constants (F5);
   C1   3.741771852e-16   First radiation constant
   C2   1.438776877e-2    Second radiation constant
 
+Example: Curve sketching (y=x*x-2)
+  * Record function: PRGM (Shift+R/S) x² 2 - R/S
+  * Calculate y(5): 5 R/S
+  * Calculate (positive) root: 8 (positive start value) SOLVER (Shift+7)
+  * Calculate integral between 0 and root: 0 ENTER 2 SQRT INTEGRAL (Shift+8)
+  * Plot function between -2 and 2: 2 +/- 2 PRINT (Shift+-)
+
 
 ____________________
 
@@ -313,8 +321,8 @@ ____________________
 ____________________
 
 The calculator FLEX has the look and feel of STAX, but actually calculates
-with the (first) cells of a RAX spreadsheet. Hence you can see (but not yet
-edit) the formula that yields to the result.
+with the (first) cells of a RAX spreadsheet. Hence you can see and (with XEQ
+or STACK>EDIT) edit the formula that yields the result.
 
 Please note that numbers without a terminating ENTER (after using SWAP or ROT)
 will be treated as not closed numbers (ie "2 ENTER 1 SWAP +" yields 24 =12*2).
@@ -444,6 +452,19 @@ Original HP35 display and keyboard layout:
     |   *     1     2     3   |
     |   /     0     .     PI  |
     |_________________________|
+
+
+____________________
+
+ TEX
+____________________
+
+TEX is a simple text editor. It offers 2 font sizes (F4) and indicates text size
+(status line) and current text line (meter bar). Navigation can be done with the
+UP/DOWN/F5/F6 keys - with SHIFT PgUp/PdDown/Home/End will be performed.
+Backspace deletes a character - SHIFT-Backspace deletes the current line.
+Please note that there are restrictions to file size (4096 bytes) and characters
+per line (128).
 
 
 ```
