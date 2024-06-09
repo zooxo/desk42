@@ -2,6 +2,9 @@
 
 # ... COMING SOON ...
 
+![Desk42_on_Plane](https://github.com/zooxo/desk42/assets/16148023/96ae46b2-377a-499d-bb97-9d65989375ed)
+
+
 ![desk42](https://github.com/zooxo/desk42/assets/16148023/94213748-9ab6-4633-9bc6-1081f0df63a6)
 
 ```
