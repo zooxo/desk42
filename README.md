@@ -3,7 +3,7 @@
 # ... COMING SOON ...
 
 ![Desk42](https://github.com/zooxo/desk42/assets/16148023/8ed2ccfe-b9a0-49d7-bbac-0f13b7cf05f6)
-The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking off from Brigham City, Utah (BMC) viewing the Wasatch Mountains on left crosswind off of Runway 17.  (© 2024 by Jim Williams)
+The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking off from Brigham City, Utah (BMC) viewing the Wasatch Mountains on left crosswind off of Runway 17.
 
 ![E6B-Example](https://github.com/zooxo/desk42/assets/16148023/de60ff11-f0a7-4276-a280-813ff284a2b0)
 
