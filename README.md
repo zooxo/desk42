@@ -12,6 +12,10 @@ The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking
 
 ```
 
+This software is protected by the BSD 3-Clause License
+and copyright (c) 2024 by deetee. All rights reserved.
+
+
 DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
 
@@ -94,7 +98,7 @@ Desk menu:
         OS     Leave DESK42 to OS (DMCP)
   APP   Menu to launch all possible applications
   SNIP  Perform a screenshot with a delay of 5 seconds (wait for beep)
-  INFO  DESK42 info
+  INFO  DESK42 info (try with different FPS)
 
 ____________________
 
@@ -260,9 +264,9 @@ navigation mode. The number keys work as cursor pad (see below). The navigation
 mode is also active when you refer in a formula to a specific cell.
 
 Navigation Numpad/Cursorpad:
-  7 Home  8 Up     9 PgUp
-  4 Left  5 Enter  6 Right
-  1 End   2 Down   3 PgDn
+  ^ Up     7 Home  8 Up     9 PgUp
+  v Down   4 Left  5 Enter  6 Right
+           1 End   2 Down   3 PgDn
 
 Keys in navigation mode:
   1~9      Navigation - cursor pad
@@ -292,12 +296,13 @@ Keys in edit mode (ENTER to select and quit):
   R/S      Separate numbers (enter)
 
 Matrix funktions (MAT):
-    DET   Determinant (from)
-    TRANS Transpose (from, to)
-    INV   Inverse (from, to)
-    MULT  Multiply (from1, from2, to)
-    SUB   Substract (from1, from2, to)
-    ADD   Add (from1, from2, to)
+  DET   Determinant (from)
+  TRANS Transpose (from, to)
+  INV   Inverse (from, to)
+  MULT  Multiply (from1, from2, to)
+  SUB   Substract (from1, from2, to)
+  ADD   Add (from1, from2, to)
+
   Please note that RAX deals with 3x3 matrices only - smaller matrices can be
   a subset.
   A reference to a matrix references to the first matrix cell [1|1].
@@ -318,7 +323,7 @@ which depends itself to a referenced cell (REF to x). In some cases additional
 REFerences are required (ie x-value-range).
 DEQ solves a differential equation (REF to function, x, y, x-target) y'=f(x,y)
 with given start value y(x0) due to Runge-Kutta with 4th order (RK4). DEQ
-calculates the solution function (y value for the targeted x).
+calculates the value of the solution function (y value for the targeted x).
 
 
 ____________________
@@ -472,6 +477,50 @@ Backspace deletes a character - SHIFT-Backspace deletes the current line.
 Please note that there are restrictions to file size (4096 bytes) and characters
 per line (128).
 
+____________________
+
+ PIX
+____________________
+
+PIX is some kind of drawing/presentation software. Insert, edit, cut, copy or
+paste up to 64 text objects (PIX array) on a 32x13 character screen and (if
+desired) insert a background image (bmp, 200x104 pixel).
+In addition the complete screen can be saved to a (2 color) *.bmp file.
+
+For presentation purposes RCL+n (n=1-9) opens a bmp-file n.bmp and a pix-file
+n.pix (where n is the pressed key number). Look at the 'R' in the status line.
+Note that (in case of unintentionally pressed) a copy of the recent pix-file
+was saved as 'backup.pix'.
+
+Please note that for selecting a text object move the cursor (numpad) to the
+left upper position of the text object.
+
+Hint: To draw filled rectangles you can use (ie XL) text objects with (invers)
+space characters. To fill 'character gaps' copy the object with a slight offset.
+
+PIX menu:
+  NEW     New PIX array (delete all text objects)
+  OPEN    Open/load PIC array from USB disc (*.pix)
+  SAVE    Save PIC array to USB disc (*.pix)
+  SAVas   Save PIC array as (file name with a length of 32 characters)
+
+BMP menu:
+  CLR     Clear background picture
+  OPEN    Open/load background image from USB disc (*.bmp)
+  SAVE    Save background image to USB disc (*.bmp)
+  SAVas   Save background image as (32 char file name)
+
+TEXT menu:
+  NEW     Insert new text object
+  EDIT    Edit attributes of text object
+  CUT/BACKSPACE, COPY, PASTE/+ selected text object
+
+TEXT object attributes:
+  SIZE    Size of characters (S M L XL)
+  COLOR   Black character on white background or vice versa
+  SHIFT   1 pixel shift down of text object
+  WAY     Vertical or horizontal direction of text object
+  TEXT    Edit text of text object
 
 ```
 
