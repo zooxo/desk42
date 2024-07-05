@@ -12,6 +12,13 @@ The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking
 
 ![DESK](https://github.com/zooxo/desk42/assets/16148023/b208fed5-1ae4-4e38-b304-d23957d07fef)
 
+
+-----
+# Manual
+
+
+
+
 ```
 
 This software is protected by the BSD 3-Clause License
@@ -19,9 +26,6 @@ and copyright (c) 2024 by deetee. All rights reserved.
 
 
 DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
-
------
-# Manual
 
 ____________________
 
