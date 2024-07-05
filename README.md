@@ -8,6 +8,8 @@ The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking
 ![E6B-Example](https://github.com/zooxo/desk42/assets/16148023/de60ff11-f0a7-4276-a280-813ff284a2b0)
 
 -----
+# Screenshots
+
 ![DESK](https://github.com/zooxo/desk42/assets/16148023/b208fed5-1ae4-4e38-b304-d23957d07fef)
 
 ```
