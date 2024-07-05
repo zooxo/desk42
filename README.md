@@ -20,7 +20,8 @@ and copyright (c) 2024 by deetee. All rights reserved.
 
 DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
-
+-----
+# Manual
 
 ____________________
 
