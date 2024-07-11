@@ -560,7 +560,7 @@ ____________________
  SCORE
 ____________________
 
-Score can annotate the score ao a game (up to 99). Inrement/decrement the score
+Score can annotate the score of a game (up to 99). Inrement/decrement the score
 of A/B with UP/DOWN or //* and clear the score of A/B with 7/9(BSP) - CLR (F6)
 clears both scores.
 
