@@ -108,6 +108,7 @@ Desk menu:
   SNIP  Perform a screenshot with a delay of 5 seconds (wait for beep)
   INFO  DESK42 info (try with different FPS)
 
+
 ____________________
 
  STATUS LINE
@@ -123,6 +124,7 @@ The central part of the top line gives you information about the status of the
 system (ie shift key or text input method).
 The left side of the status line gives you information about the running app
 (name, status, indicators).
+
 
 ____________________
 
@@ -351,6 +353,73 @@ Please note that leaving FLEX always clears all variables.
 
 ____________________
 
+ FORX
+____________________
+
+FORX is not implemented yet. I'm still looking for a standard FORTH
+implementation which can handle float (double) numbers and which is easy to port
+to the DM-42.
+
+
+____________________
+
+ HP-35
+____________________
+
+This is the emulation of the legendary HP-35 pocket calculator, that was
+introduced by Hewlett-Packard in January 1972.
+Much later Peter Monta, Jacques Laporte and Pietro de Luca managed to run the
+HP-35-ROM on other platforms. And the footprint of this calculator is incredible
+small with 768/1536 words/bytes (ROM) and less than 10 Kilobytes of flash memory
+(for the whole calculator application).
+
+Please note that HP-35 doesn't use shifted keys. The SHIFT key is used to toggle
+between the (smaller) original full precision display of the top of the stack
+and the big 8-digit display. The latter one is complemented with a full
+precision top of stack view in an additional status line.
+This additional status line also displays an executed stacklift, a stored number
+and the use of the recorder (see below) by showing a REC or PLAY sign.
+
+The calculator is complemented by an useful "Key Recorder" which "feeds" the
+emulator with key presses. With the SIGMA key the user can start or stop
+recording (up to 50) key presses - the XEQ key executes the recorded key press
+series.
+
+But there are also many key series prerecorded that can be selected with extra
+function keys (use the UP and DOWN keys to switch between different function
+keys:
+  * Hyperbolic functions (SINH, COSH, TANH and inverse)
+  * Additional math functions
+    - Polar/Rectangular conversions
+    - Present value (interest rate, time periods -> present value)
+    - Normal distribution (CDF/PDF)
+    - LN! ... ln(gamma()) function (factorial)
+    - Quadratic equation (p, q)
+  * Unit conversions (length weight, volume, temperature). Please note that
+    the conversions are always made in both directions. The X-register always
+    display the metric unit and the Y-register the english one (use SWAP key).
+
+Please note that it is not possible to record pre recorded functions.
+
+Original HP35 display and keyboard layout:
+     _________________________
+    |                         |
+    |     -1.234567890-12     |
+    |_________________________|
+    |                         |
+    | X^Y  log  ln   e^X  CLR |
+    | SQRT arc  sin  cos  tan |
+    | 1/X  X><Y ROT  STO  RCL |
+    | E-N-T-E-R CHS  EEX  CLX |
+    |   -     7     8     9   |
+    |   +     4     5     6   |
+    |   *     1     2     3   |
+    |   /     0     .     PI  |
+    |_________________________|
+
+
+____________________
+
  E6B
 ____________________
 
@@ -418,63 +487,6 @@ To exit/quit E6B to DESK press QUIT (F1).
 
 ____________________
 
- HP-35
-____________________
-
-This is the emulation of the legendary HP-35 pocket calculator, that was
-introduced by Hewlett-Packard in January 1972.
-Much later Peter Monta, Jacques Laporte and Pietro de Luca managed to run the
-HP-35-ROM on other platforms. And the footprint of this calculator is incredible
-small with 768/1536 words/bytes (ROM) and less than 10 Kilobytes of flash memory
-(for the whole calculator application).
-
-Please note that HP-35 doesn't use shifted keys. The SHIFT key is used to toggle
-between the (smaller) original full precision display of the top of the stack
-and the big 8-digit display. The latter one is complemented with a full
-precision top of stack view in an additional status line.
-This additional status line also displays an executed stacklift, a stored number
-and the use of the recorder (see below) by showing a REC or PLAY sign.
-
-The calculator is complemented by an useful "Key Recorder" which "feeds" the
-emulator with key presses. With the SIGMA key the user can start or stop
-recording (up to 50) key presses - the XEQ key executes the recorded key press
-series.
-
-But there are also many key series prerecorded that can be selected with extra
-function keys (use the UP and DOWN keys to switch between different function
-keys:
-  * Hyperbolic functions (SINH, COSH, TANH and inverse)
-  * Additional math functions
-    - Polar/Rectangular conversions
-    - Present value (interest rate, time periods -> present value)
-    - Normal distribution (CDF/PDF)
-    - LN! ... ln(gamma()) function (factorial)
-    - Quadratic equation (p, q)
-  * Unit conversions (length weight, volume, temperature). Please note that
-    the conversions are always made in both directions. The X-register always
-    display the metric unit and the Y-register the english one (use SWAP key).
-
-Please note that it is not possible to record pre recorded functions.
-
-Original HP35 display and keyboard layout:
-     _________________________
-    |                         |
-    |     -1.234567890-12     |
-    |_________________________|
-    |                         |
-    | X^Y  log  ln   e^X  CLR |
-    | SQRT arc  sin  cos  tan |
-    | 1/X  X><Y ROT  STO  RCL |
-    | E-N-T-E-R CHS  EEX  CLX |
-    |   -     7     8     9   |
-    |   +     4     5     6   |
-    |   *     1     2     3   |
-    |   /     0     .     PI  |
-    |_________________________|
-
-
-____________________
-
  TEX
 ____________________
 
@@ -484,6 +496,7 @@ UP/DOWN/F5/F6 keys - with SHIFT PgUp/PdDown/Home/End will be performed.
 Backspace deletes a character - SHIFT-Backspace deletes the current line.
 Please note that there are restrictions to file size (4096 bytes) and characters
 per line (128).
+
 
 ____________________
 
@@ -495,15 +508,16 @@ paste up to 64 text objects (PIX array) on a 32x13 character screen and (if
 desired) insert a background image (bmp, 200x104 pixel).
 In addition the complete screen can be saved to a (2 color) *.bmp file.
 
-For presentation purposes RCL+n (n=1-9) opens a bmp-file n.bmp and a pix-file
-n.pix (where n is the pressed key number). Look at the 'R' in the status line.
-Note that (in case of unintentionally pressed) a copy of the recent pix-file
-was saved as 'backup.pix'.
+It's also possible to store/recall (F5/F6 or STO/RCL) a PIX/BMP-combination to
+one of 9 slots (slides). STO+n/RCL+n saves/loads n.pix and n.bmp to/from the
+USB disk (where n is the pressed key number 1-9). Please note the 'S'/'R'
+symbols in the status line. In case of an unintentionally pressed STO a backup
+file (backup.pix and backup.bmp) will be saved to USB disk.
 
 Please note that for selecting a text object move the cursor (numpad) to the
 left upper position of the text object.
 
-Hint: To draw filled rectangles you can use (ie XL) text objects with (invers)
+Hint: To draw filled rectangles you can use (ie XL) text objects with (inverted)
 space characters. To fill 'character gaps' copy the object with a slight offset.
 
 PIX menu:
@@ -529,6 +543,63 @@ TEXT object attributes:
   SHIFT   1 pixel shift down of text object
   WAY     Vertical or horizontal direction of text object
   TEXT    Edit text of text object
+
+
+____________________
+
+ CAL
+____________________
+
+CAL shows a monthly calendar. Decrement/increment month or year with F5/F6 (or
+UP/DOWN) or F3/F4. Goto the recent month with NOW (F2) or exit with QUIT. Toggle
+the start of the week (SUN or MON) with any other key.
+
+
+____________________
+
+ SCORE
+____________________
+
+Score can annotate the score ao a game (up to 99). Inrement/decrement the score
+of A/B with UP/DOWN or //* and clear the score of A/B with 7/9(BSP) - CLR (F6)
+clears both scores.
+
+
+____________________
+
+ MERGE
+____________________
+
+In this 2048-like game you have to shift and merge equal numbers in a 4x4 grid.
+
+Possible keys are:
+  F1      Quit
+  F2      New game
+  F3 4 1  Collapse left
+  F4 2    Collapse down
+  F5 8 5  Collapse up
+  F6 6 3  Collapse right
+
+
+____________________
+
+ ARENA
+____________________
+
+ARENA is a simple ego shooter with very open setting possibilities. You can
+determine how many enemies and medipacks you want to play with. You can even
+draw your own arena maze with the built-in map editor and save it permanently to
+the USB disk. You can even toggle between a 3D an 2D view (even if the latter
+one is to small and was inteded for orientation purposes).
+
+Beside medipacks and ammunition you find the following enemies:
+  ROBO - Reliable soldier with harmless distance shots
+  TAUR - Fast beast which hurts when close
+  NITE - Slow knight which hurts severe when close
+  EVIL - Slow but persistent devil with severe shots from distance
+  OCTO - Fast octopus that squashes lethal when close
+
+
 
 ```
 
