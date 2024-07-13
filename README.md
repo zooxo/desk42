@@ -29,10 +29,7 @@ The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking
 # Manual
 
 
-
-
 ```
-
 This software is protected by the BSD 3-Clause License
 and copyright (c) 2024 by deetee. All rights reserved.
 
@@ -310,7 +307,7 @@ Keys in edit mode (ENTER to select and quit):
      COND  Conditions (IF, ELSE, THEN, <, =, >)
      INF   Infinitesimal operations (MIN/MAX/PLOT, SLOPE, SOLVE, INT, DEQ))
   F3 FN    (STAX) Functions (HYP, STAT, CONV, CONST, MAT) ... see STAX
-  F5/F6    Cursor left/right
+  F5/F6    Cursor left/right (HOME/END with SHIFT+F5/F6)
   BSP      Clear command left to cursor
   CLEAR    Clear complete formula
   RCL      Reference
@@ -453,7 +450,7 @@ All tools of E6B are ordered in 17 pages (browse with F5, F6 or F4):
   0    Table of pages (9 fast keys to E6B categories)
   1    Dead Reckoning 1: Select route input (page 2) and desired units
   2    Dead Reckoning 2: Insert coordinates or course/distance
-       Latitude/Longitude repectively True Course and Distance
+       Latitude/Longitude respectively True Course and Distance
   3    Dead Reckoning 3: Insert other data
        Magnetic Variation, True Air Speed, Fuel Burn Rate,
        Wind Direction and Wind Velocity
@@ -571,8 +568,8 @@ ____________________
  SCORE
 ____________________
 
-Score can annotate the score of a game (up to 99). Inrement/decrement the score
-of A/B with UP/DOWN or //* and clear the score of A/B with 7/9(BSP) - CLR (F6)
+SCORE can display the score of a game (0 to 99). Inrement/decrement the score
+of A/B with UP/DOWN or /|* and clear the score of A/B with 7/9(BSP) - CLR (F6)
 clears both scores.
 
 
@@ -600,8 +597,8 @@ ____________________
 ARENA is a simple ego shooter with very open setting possibilities. You can
 determine how many enemies and medipacks you want to play with. You can even
 draw your own arena maze with the built-in map editor and save it permanently to
-the USB disk. You can even toggle between a 3D an 2D view (even if the latter
-one is to small and was inteded for orientation purposes).
+the USB disk. You can toggle between a 3D an 2D view (even if the latter one is
+to small and was inteded for orientation purposes).
 
 Beside medipacks and ammunition you find the following enemies:
   ROBO - Reliable soldier with harmless distance shots
@@ -609,7 +606,6 @@ Beside medipacks and ammunition you find the following enemies:
   NITE - Slow knight which hurts severe when close
   EVIL - Slow but persistent devil with severe shots from distance
   OCTO - Fast octopus that squashes lethal when close
-
 
 
 ```
