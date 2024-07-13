@@ -20,6 +20,10 @@ The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking
 ![e6b](https://github.com/user-attachments/assets/a9f225c2-fac6-43b2-bda7-b236a4d2b49a)
 ![tex](https://github.com/user-attachments/assets/a21215e4-d486-4c11-83aa-efd2756b96e6)
 ![pic](https://github.com/user-attachments/assets/851a4581-a6d6-4971-be0e-2f72ddbe8d21)
+![cal](https://github.com/user-attachments/assets/2ab0f994-0e66-4e2c-8a3f-5b35debc46c4)
+![score](https://github.com/user-attachments/assets/3be722ca-d9e3-4177-927b-bdbdc6497a58)
+![merge](https://github.com/user-attachments/assets/ee49be52-ce27-4504-a521-4aa20d053bb3)
+![arena](https://github.com/user-attachments/assets/09913c1f-7dc6-4182-95c4-75226f3ca06e)
 
 -----
 # Manual
