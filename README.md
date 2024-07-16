@@ -1,4 +1,4 @@
-# DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
+# DESK42 - Calculator, Spreadsheet, Flight Planner, Text, Graphics, Games and More for the DM42
 
 -----
 
