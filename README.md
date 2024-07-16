@@ -1,5 +1,11 @@
 # DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
+-----
+
+See a short video at: 
+
+-----
+
 ![Desk42](https://github.com/zooxo/desk42/assets/16148023/8ed2ccfe-b9a0-49d7-bbac-0f13b7cf05f6)
 The DM42 running DESK42 (E6B) in action in the cockpit of a Piper Warrior taking off from Brigham City, Utah (BMC) viewing the Wasatch Mountains on left crosswind off of Runway 17.
 
