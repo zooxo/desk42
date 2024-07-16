@@ -2,7 +2,7 @@
 
 -----
 
-See a short video at: 
+See a short video of Version 1 of DESK42 at: https://youtu.be/4vVC2r3lCPA
 
 -----
 
