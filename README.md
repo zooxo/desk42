@@ -2,6 +2,10 @@
 
 -----
 
+## *** NEW APP: PLEX - A dedicated Calculator for Complex Numbers - Try Version 2 ***
+
+-----
+
 See a short video of Version 1 of DESK42 at: https://youtu.be/4vVC2r3lCPA
 
 -----
