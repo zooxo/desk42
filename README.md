@@ -90,7 +90,7 @@ Install DESK42:
 
 Reinstall DM42:
 
- * Switch back to the operating system (DMCP) with DESK>OS (F6, F6).
+ * Switch back to the operating system (DMCP) with DESK>OS (F1, F6).
  * Load another program with [3. Load Program]
  * Select the DM42 program [DM42-x.xx.pgm]
  * [Confirm with ENTER]
@@ -212,20 +212,22 @@ STAX supports following functions:
 
   F1 QUIT      Exit STAX
   F2 HYP       Hyperbolic functions
-  F3 STAT      Statisitic/misc functions
+  F3 MATH
+  F4 STAT      Statisitic/misc functions
                AVG|S ... Mean value, standard deviation
                LRa|b ... Line best fit y=ax+b
                nP|Cr ... Permutations (nPr), Combinations (nCr)
                P|Cdf ... Propability Density (PDF), Cumulative Distribution (CDF)
                LN(!) ... Gamma function
                INT   ... Integer value of TOS
-  F4 CONV      Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cm/in, l/gal)
-  F5           Physical constant (see below)
+  F5 MISC      CONV  Conversions (Polar/rect, hms/h, °C/°F, kg/lbs, cm/in, l/gal)
+               CONST Physical constants (see below)
+               FN    (f(x), SLOPE, SOLVE, INTEGRATE, PLOT)
   F6 HEX BASE  Toggle HEX and DEC mode
 
 Complex number operations (XEQ + ...):
-  UP           Convert to polar coordinates
-  DOWN         Convert to rectangular coordinates
+  UP           Convert to polar coordinates (works without XEQ or SHIFT)
+  DOWN         Convert to rectangular coordinates (works without XEQ or SHIFT)
   BasicMath    + - * /  1/X SQRT LOG LN POW SQR 10^X e^X
   Trig         SIN COS TAN ASIN ACOS ATAN
   Misc         ENTER SWAP +/- BACKSPACE STO RCL LASTx
@@ -270,10 +272,11 @@ Physical constants (F5);
 
 Example: Curve sketching (y=x*x-2)
   * Record function: PRGM (Shift+R/S) x² 2 - R/S
-  * Calculate y(5): 5 R/S
-  * Calculate (positive) root: 8 (positive start value) SOLVER (Shift+7)
-  * Calculate integral between 0 and root: 0 ENTER 2 SQRT INTEGRAL (Shift+8)
-  * Plot function between -2 and 2: 2 +/- 2 PRINT (Shift+-)
+  * y(5): 5 R/S or MISC->FN->f(x)
+  * y'(5): 5 Shift+9 or MISC->FN->SLOPE
+  * Root: 8 (positive start value) SOLVER (Shift+7) or MISC->FN->SOLVE
+  * Integral from 0 to 1: 0 ENTER 1 INTEGRAL (Shift+8) or MISC->FN->INTEGRATE
+  * Plot function between -2 and 2: 2 +/- 2 PRINT (Shift+-) or MISC->FN->PLOT
 
 
 ____________________
@@ -361,6 +364,37 @@ Please note that numbers without a terminating ENTER (after using SWAP or ROT)
 will be treated as not closed numbers (ie "2 ENTER 1 SWAP +" yields 24 =12*2).
 Please note that DISP (Shift+E) toggles the display format.
 Please note that leaving FLEX always clears all variables.
+
+
+____________________
+
+ PLEX
+____________________
+
+PLEX is a dedicated calculator for complex numbers. It was buildt from scratch
+and doesn't use any routines from other calculators of DESK42.
+
+PLEX supports following functions:
+  0~9.           (Real) Number input
+  + - * /        Basic operation
+  BACKSPACE      Clear last entry (while number input) or TOS
+  ENTER          Enter number (lift stack) or duplicate TOS
+  X<>Y           Swap last stack register
+  LASTx          Push last ENTERed number to stack
+  +/-            Negate TOS (ends number input)
+  E              Push Y*10^X to the stack
+  CLEAR          Clear stack and statistics register
+  STO RCL        Stores TOS or push stored number to stack
+  ROT            Rotate last 3 stack elements
+  Trig/Hyp       SIN COS TAN ASIN ACOS ATAN
+  BasicMath      % PI 1/X POW SQRT SQR LOG 10^X LN e^X
+  Shift+XEQ      ln(GAMMA)
+  F1             Quit
+  F2 DISP        Toggle number input indicator (arrow or frame)
+  F3 XEQ         Toggle view (rectangular or polar)
+  F4 HYP         Announce hyperbolic operation
+  F5 SIGMA       Conjugate TOS
+  F6 R/S COMPLEX Convert 2 real numbers on stack to complex number (vice versa)
 
 
 ____________________
