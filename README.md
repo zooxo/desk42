@@ -371,7 +371,7 @@ ____________________
  PLEX
 ____________________
 
-PLEX is a dedicated calculator for complex numbers. It was buildt from scratch
+PLEX is a dedicated calculator for complex numbers. It was built from scratch
 and doesn't use any routines from other calculators of DESK42.
 
 PLEX supports following functions:
