@@ -85,7 +85,7 @@ Install DESK42:
  * Enter menu point [5. System >]
  * Goto system menu with [2. Enter System Menu]
  * Leave DM42 and switch back to the operating system (DMCP) with
-   [3. Reset to DMCP menu]
+   [4. Reset to DMCP menu]
  * Load another program with [3. Load Program]
  * Select the DESK42 program [DESK42-xxx.pgm]
  * [Confirm with ENTER]
