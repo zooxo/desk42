@@ -46,6 +46,7 @@ and copyright (c) 2024 by deetee. All rights reserved.
 
 DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
+
 ____________________
 
  PREAMBLE
@@ -74,7 +75,7 @@ ____________________
  INSTALLATION
 ____________________
 
-Please note that you will loose all user data of your DM42 (ie. user programs or
+Please note that you will lose all user data of your DM42 (ie. user programs or
 settings) - make a backup!
 
 Install DESK42:
@@ -86,7 +87,7 @@ Install DESK42:
  * Enter menu point [5. System >]
  * Goto system menu with [2. Enter System Menu]
  * Leave DM42 and switch back to the operating system (DMCP) with
-   [4. Reset to DMCP menu]
+   [3. Reset to DMCP menu]
  * Load another program with [3. Load Program]
  * Select the DESK42 program [DESK42-xxx.pgm]
  * [Confirm with ENTER]
@@ -377,7 +378,7 @@ ____________________
  PLEX
 ____________________
 
-PLEX is a dedicated calculator for complex numbers. It was built from scratch
+PLEX is a dedicated calculator for complex numbers. It was buildt from scratch
 and doesn't use any routines from other calculators of DESK42.
 
 PLEX supports following functions:
@@ -596,6 +597,56 @@ TEXT object attributes:
   WAY     Vertical or horizontal direction of text object
   TEXT    Edit text of text object
 
+
+____________________
+
+ JET3d
+____________________
+
+JET3d can view and edit 3D wired geometric figures. Imagine the viewer (man) has
+some kind of viewing screen infront of his face and flies with a jetpack around
+this figure (mostly on an cylindrical trajectory).
+A geometric figure is defined by (up to 25) knots. It's recommended that their
+coordinates (x|y|z) are in a range between -50 and 50.
+
+F-key Menu [and shortcuts]:
+  FILE NEW       Start new project
+       SAVE LOAD Save/load project to/from slot n (1-5) - file n.jet
+       DEMO      Start demo project ("church house")
+  FPS            Set FPS rate (for autofly mode)
+  KNOT NEW       Create new knot [+]
+       EDIT      Start/End knot edit/selection mode [ENTER]
+       DEL       Delete selected knot [BSP][-]
+  LINK MARK      Mark selected knot [E|CHS|SWAP] - then select 2nd knot
+       NEW       Create new link (between two selected knots) [+]
+       DEL       Delete selected link (between selected knots) [BSP][-]
+
+Special keys:
+  SUM STO        In/Decrement x-value of knot
+  1/X RCL        In/Decrement y-value of knot
+  SQRT ROT       In/Decrement z-value of knot
+  XEQ TAN        Edit next/previous knot
+
+  UP DOWN        Zoom in/out
+  8 2            In/Decrement hight of man (z coordinate)
+  4 6            Rotate man left/right
+  9 3            In/Decrement distance of screen to man
+  7 1            In/Decrement screen angle (relative to man)
+  5              Exit (knot) edit mode
+  0              Reset viewing parameters
+  DOT R/S        Activate AutoFly (rotate left or right)
+
+Hint 1 - Create a new knot:
+Press KNOT->NEW to create a new knot at 0|0|0 and change it's coordinates
+(x|y|z) with SUM/STO, 1/X/RCL or SQRT/ROT.
+
+Hint 2 - Edit a knot:
+Press KNOT->EDIT and select the knot with XEQ/TAN. To end the edit mode press 5
+or KNOT->EDIT again.
+
+Hint 3 - Create a new link:
+Edit and select the first knot and mark it with LINK->MARK. Select second knot
+(XEQ/TAN) and press LINK->NEW to create a new link between this two knots.
 
 ____________________
 
