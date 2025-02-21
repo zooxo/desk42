@@ -2,7 +2,7 @@
 
 -----
 
-## *** NEW APP: JET3d -  - Try Version 3 ***
+## *** NEW APP: JET3d - View and edit 3D wired geometric figures - Try Version 3 ***
 
 ## *** NEW APP: PLEX - A dedicated Calculator for Complex Numbers - Try Version 2 ***
 
