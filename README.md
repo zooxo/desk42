@@ -2,6 +2,8 @@
 
 -----
 
+## *** NEW APP: JET3d -  - Try Version 3 ***
+
 ## *** NEW APP: PLEX - A dedicated Calculator for Complex Numbers - Try Version 2 ***
 
 -----
@@ -632,8 +634,8 @@ Special keys:
   4 6            Rotate man left/right
   9 3            In/Decrement distance of screen to man
   7 1            In/Decrement screen angle (relative to man)
-  5              Exit (knot) edit mode
-  0              Reset viewing parameters
+  5              Reset viewing settings
+  0              Align to x|y-axis
   DOT R/S        Activate AutoFly (rotate left or right)
 
 Hint 1 - Create a new knot:
