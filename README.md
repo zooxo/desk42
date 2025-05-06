@@ -54,7 +54,6 @@ and copyright (c) 2024 by deetee. All rights reserved.
 
 DESK42 - Calculator, Spreadsheet, Text, Graphics, Games and More for the DM42
 
-
 ____________________
 
  PREAMBLE
@@ -709,6 +708,57 @@ Beside medipacks and ammunition you find the following enemies:
   NITE - Slow knight which hurts severe when close
   EVIL - Slow but persistent devil with severe shots from distance
   OCTO - Fast octopus that squashes lethal when close
+
+
+____________________
+
+TTOP
+____________________
+
+TTOP is a tabletop calculator that enables (simple) calculations with big
+numbers (even in HEX format) with up to 13 digits. If desired two digits are
+used for decimals (ie for cent amounts). PLease note that entering decimals
+(after pressing ".") always "shifts the pressed number key in".
+
+TTOP supports the following functions:
+  + - * / Basic operation
+  CHS     Negate TOS (ends number input)
+  EEX     Push Y*10^X to the stack (Y*16^X in HEX mode)
+  ENTER   Enter number (stack lift) or duplicate TOS
+  SWAP    Swap X and Y
+  ROT     Rotate 3 stack elements
+  BSP     Clear last number
+  SQRT    Calculate square root
+  SUM+    NAND ~(X & Y) ... useful in HEX mode
+  STO RCL Store TOS or push stored number to stack (store 0 to delete)
+  F1      Quit TTOP
+  F2 -.-  Toggle 0/2 decimals
+  F6      Toggle HEX mode
+
+
+____________________
+
+RULE
+____________________
+
+RULE is a simulation of a historic slide rule. This might be a serious
+calculating tool or simple for reasons of education and reminiscence.
+
+Scales of RULE:
+  A B     Quadratic scale of C D
+  SIN/COS Angle *10 to sine/cosine on scale C
+  CI      Inverse of scale C
+  C D     Standard scale
+
+RULE supports the following functions:
+  F1      Quit RULE
+  F2 F6   Move slide one pixel left/right
+  F3 F5   Move slide 10 pixels left/right
+  F4      Center slide
+  1/X XEQ Move hair line one pixel left/right
+  SQRT LN Move hair line 10 pixels left/right
+  F4      Center hair line
+  1...9   Slide CD-relation to 1...9
 
 
 ```
