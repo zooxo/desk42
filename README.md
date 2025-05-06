@@ -1,6 +1,10 @@
 # DESK42 - Calculator, Spreadsheet, Flight Planner, Text, Graphics, Games and More for the DM42
 
 -----
+## *** NEW APP: TTOP - Tabletop Calculator - Try Version 4 ***
+## *** NEW APP: RULE - Slide Rule Simulation - Try Version 4 ***
+
+
 
 ## *** NEW APP: JET3d - View and edit 3D wired geometric figures - Try Version 3 ***
 
